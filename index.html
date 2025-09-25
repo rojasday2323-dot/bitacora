@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bitácora de Proyectos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Bitácora de Proyectos</h1>
+
+    <form id="projectForm">
+      <label>Fecha inicio:</label>
+      <input type="date" id="fechaInicio" required>
+
+      <label>Fecha fin:</label>
+      <input type="date" id="fechaFin" required>
+
+      <label>Proyecto:</label>
+      <input list="listaProyectos" id="proyecto" required>
+      <datalist id="listaProyectos"></datalist>
+
+      <label>PO:</label>
+      <input list="listaPO" id="po" required>
+      <datalist id="listaPO"></datalist>
+
+      <label>DEV:</label>
+      <input list="listaDEV" id="dev" required>
+      <datalist id="listaDEV"></datalist>
+
+      <button type="submit">➕ Agregar</button>
+    </form>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="🔍 Buscar en la bitácora...">
+      <button id="exportCSV">⬇ Exportar CSV</button>
+    </div>
+
+    <div id="history"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
